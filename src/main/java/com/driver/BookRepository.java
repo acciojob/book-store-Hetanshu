@@ -17,7 +17,11 @@ public class BookRepository {
     }
 
     public Book findBookById(int id){
-        return bookList.get(id-1);
+        for(Book b:bookList){
+            if(b.getId()==id)return b;
+        }
+        return null;
+//        return bookList.get(id-1);
     }
 
     public List<Book> findAll(){
