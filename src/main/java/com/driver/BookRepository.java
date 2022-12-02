@@ -25,7 +25,9 @@ public class BookRepository {
     }
 
     public void deleteBookById(int id){
-        bookList.remove(id-1);
+        for(int i=0;i<bookList.size();i++){
+            if(bookList.get(i).getId()==id)bookList.remove(i);
+        }
     }
 
     public void deleteAll(){
