@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("books")
 public class BookController {
-    private int id=1;
+//    private int id=1;
 
 
     @Autowired
@@ -19,8 +19,8 @@ public class BookController {
     // One example controller, make the rest by yourself
     @PostMapping("/create-book")
     public ResponseEntity createBook(@RequestBody Book book){
-        book.setId(this.id);
-        this.id++;
+//        book.setId(this.id);
+//        this.id++;
         Book newbook = bookService.createBook(book);
         return new ResponseEntity<>(newbook, HttpStatus.CREATED);
     }
