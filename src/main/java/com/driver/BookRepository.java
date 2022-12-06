@@ -21,7 +21,7 @@ public class BookRepository {
 
     public Book findBookById(int id){
         for(Book b:bookList){
-            if(b.getId()==id)return b;
+            if(b.getId()==id-1)return b;
         }
         return null;
 //        return bookList.get(id-1);
